@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="./CSS/basicCSS.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>餐廳介紹</title>
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a href="index.html">
+            <img id="home_img" src="./Icon/home.png" alt="首頁">
+            <span class="" id="home"></span>
+        </a>
+        <a href="">
+            <img id="login_img" src="./Icon/user.png" alt="會員登入">
+            <span class="" id="member"></span>
+        </a>
+    </div>
+    <div>
+        <div class="member-functions-bar">
+            <div>
+                <a href="service.html">
+                    <h1>立即登入去預約</h1>
+            </div>
+            <div>
+                <a href="index.html">
+                    <h1>回首頁</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        if (UserNameCheck = "${username}") {
+            document.getElementById("member").innerText = "你好:" + "${username}";
+        } else {
+            document.getElementById("member").innerText = "登入/註冊";
+        }
+    </script>
+</body>
+
+</html>

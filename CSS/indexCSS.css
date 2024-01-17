@@ -1,0 +1,26 @@
+#index_img{
+   		
+   	max-width: 100%;
+   	max-height: 100%;
+   	
+}
+.textContent {
+	display: flex;
+	width: 100%;
+	overflow: auto;
+	justify-content: center;
+}
+
+.text{
+	font-size: 30px;
+	background-color: gray;
+	width: 34%;
+	min-width:100%;
+	text-align: center;
+	
+	
+}
+
+.text:hover{
+	background-color: white;
+}

@@ -1,0 +1,29 @@
+	body {
+		background-image: url(../Image/ella-olsson-oPBjWBCcAEo-unsplash.jpg)
+	}
+
+	.icon-bar {
+		min-width: 100%;
+		background-color: gray;
+		overflow: auto;
+	}
+
+	.icon-bar a {
+		float: left;
+		text-align: center;
+		width: 50%;
+		padding: 10px 0;
+		transition: all 0.3s ease;
+		color: black;
+		font-size: 24px;
+	}
+
+	#login_img {
+		width: 60px;
+		height: 60px;
+	}
+
+	#home_img {
+		width: 60px;
+		height: 60px;
+	}
