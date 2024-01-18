@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery v1.9.1 -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- toastr v2.1.4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/basicCSS.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/memberShipCenterCSS.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/memberCRUD_CSS.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+</head>
+
+<body onload="memberStatus()">
+    <div class="icon-bar">
+        <a href="index.html">
+            <img id="home_img" src="./Icon/home.png" alt="首頁">
+            <span class="" id="home"></span>
+        </a>
+        <a href="login.html">
+            <img id="login_img" src="./Icon/user.png" alt="會員登入">
+            <span class="" id="member"></span>
+        </a>
+    </div>
+    <h1 style="text-align: center; margin-top: 50px">登入您的帳號</h1>
+    <form method='POST' action="loginCheck">
+        <fieldset class=member>
+            <div class="mem">
+                <label>會員帳號:</label>
+                <input type="text" placeholder="輸入帳號" id="account" name="account"><br />
+            </div>
+            <div class="mem">
+                <label>會員密碼:</label>
+                <input type="password" placeholder="輸入密碼" id="passWord" name="passWord"><br />
+            </div>
+
+            <div class="member-submit-bar">
+                <div class="mem1">
+                    <button id="create"><a href="" style="text-decoration: none;">註冊新會員</a></button>
+                </div>
+                <div class="mem1">
+                    <input type="submit" value="登入" class="button"><br />
+                </div>
+
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- 彈出帳號申請成功提醒 -->
+    <script>
+
+        if (UserNameCheck = "${username}") {
+            document.getElementById("member").innerText = "你好:" + "${username}";
+        } else {
+            document.getElementById("member").innerText = "登入/註冊";
+        }
+    </script>
+    <script>
+        function memberStatus() {
+            if ("${alert}" == "createSuccess") {
+                toastr.options.timeOut = 3000;
+                toastr.info('會員申請成功');
+            };
+        }	
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>會員頁面</title>
+
+    <!-- jQuery v1.9.1 -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- toastr v2.1.4 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/basicCSS.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/memberShipCenterCSS.css" type="text/css">
+
+</head>
+
+<body onload="memberStatus()">
+    <div class="icon-bar">
+        <a href="index.html">
+            <img id="home_img" src="./Icon/home.png" alt="首頁">
+            <span class="" id="home"></span>
+        </a>
+        <a href="login.html">
+            <img id="login_img" src="./Icon/user.png" alt="會員登入">
+            <span class="" id="member"></span>
+        </a>
+    </div>
+    <div class="member-functions-bar">
+        <div class="ed">
+            <span id="Edit"><a class="btn" href="memberEdit.html">會員資料修改</a></span>
+        </div>
+        <div class="reservationSearch">
+            <span id="buttonPress"><a class="btn" href="reservationSearch.html">查詢預約紀錄</a></span>
+        </div>
+        <div class="log">
+            <span id="buttonPress"><a class="btn" href="index.html">登出</a></span> <!--需要加JS去處理登出資料-->
+        </div>
+    </div>
+    <div id="bc">
+        <div id="title">
+            <h1>會員中心</h1>
+        </div>
+        <div class="inf">
+
+            <form>
+                <fieldset class="box">
+                    <table>
+                        <tr>
+                            <th>姓名:</th>
+                            <td>username </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset class="box">
+                    <table>
+                        <tr>
+                            <th>年齡:</th>
+                            <td>age</td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+            <form>
+                <fieldset class="box">
+                    <table>
+                        <tr>
+                            <th>電話:</th>
+                            <td>tel</td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+            <form>
+                <fieldset class="box">
+                    <table>
+                        <tr>
+                            <th>手機:</th>
+                            <td>cellphone</td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+            <form>
+                <fieldset class="box">
+                    <table>
+                        <tr>
+                            <th>電子郵件:</th>
+                            <td>email</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <!-- 彈出會員登入成功or會員修改成功 -->
+
+    <script>
+        function memberStatus() {
+            if ("${alert}" == "editSuccess") {
+                toastr.options.timeOut = 3000;
+                toastr.info('會員修改成功');
+            }
+        }	
+    </script>
+    <script>
+
+        if (UserNameCheck = "${username}") {
+            document.getElementById("member").innerText = "你好:" + "${username}";
+        } else {
+            document.getElementById("member").innerText = "登入/註冊";
+        }
+    </script>
+</body>
+
+</html>

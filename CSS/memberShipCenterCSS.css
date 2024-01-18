@@ -1,0 +1,49 @@
+.member-functions-bar{
+	overflow: auto;
+	
+}
+
+.member-functions-bar a{
+	float: left; 
+ 	text-align: center;
+ 	width: 33%; 
+ 	color: black; 
+ 	font-size: 24px;  
+}
+
+fieldset {
+     left: 30%;
+     width: 40%;
+     min-height: fit-content;
+     min-width: 200px;
+     position: relative;
+     background-color: #c0c0c0;      
+}
+
+#title{
+	display:flex;
+	font-size: 26px;
+	align-items: center;
+    justify-content: center;
+    
+}
+        
+table {
+     border-spacing: 0px 10px;
+     width: 100%;
+}        
+
+th {
+      color: blue;
+      text-align: left;
+      font-weight:bolder;      
+      padding: 20px;
+}
+
+td {
+      color: black;
+      text-align: right;
+      font-size: larger;
+      font-weight:bolder;
+      padding: 20px;
+}        
