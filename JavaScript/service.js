@@ -6,7 +6,7 @@ $('#buttonPress').click(function () {
         success: function (result) {
             alert('預約結果: ' + result.reservation_result + '/n' + result.greetWord);
 
-            window.location.href = 'index.html';
+            window.location.replace('index.html');
 
         },
         error: function (xhr, status, error) {
