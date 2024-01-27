@@ -2,7 +2,9 @@
 <html>
 
 <head>
-
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./CSS/basicCSS.css" type="text/css">
 
     <meta charset="UTF-8">
@@ -26,13 +28,15 @@
         </div>
         <h1>預約頁面</h1>
         <div class="inf">
-            <form method="post" action="Reservation">
+            <form method="post"
+                action="https://script.google.com/macros/s/AKfycby4ewWrVVGYRGVA1Hhrnc6ewWJlP7M9kbBLpS5oS63e0UrsMdRZp-Rcz_F71j7TDs8X/exec">
                 <fieldset class="box">
-                    <input type="hidden" name="account" value="${account}" required />
+                    <input type="hidden" name="account" value="test_account" required />
+                    <input type="hidden" name="userName" value="test_userName" required />
                     <table>
                         <tr>
                             <th>預約人數:</th>
-                            <td><input type="radio" id="customer" name="customer" value="1">1人
+                            <td><input type="radio" id="customer" name="customer" value="1" required>1人
                                 <input type="radio" id="customer" name="customer" value="2">2人
                                 <input type="radio" id="customer" name="customer" value="3">3人
                                 <input type="radio" id="customer" name="customer" value="4">4人
@@ -49,7 +53,7 @@
                     <table>
                         <tr>
                             <th>預約用餐時間:</th>
-                            <td><input type="radio" id="eatingTime" name="eatingTime" value="noon">午餐
+                            <td><input type="radio" id="eatingTime" name="eatingTime" value="noon" required>午餐
                                 <input type="radio" id="eatingTime" name="eatingTime" value="afternoon">下午茶
                                 <input type="radio" id="eatingTime" name="eatingTime" value="night">晚餐
                             </td>
@@ -60,7 +64,7 @@
                         <button type="submit" id="buttonPress"><a class="btn">預約確認</a></button>
                     </div>
                     <div class="memberEditCancel">
-                        <button id="buttonPress"><a class="btn" href="<c:url value='/cancelEdit'/>">取消修改</a></button>
+                        <button id="buttonPress"><a class="btn" href="">取消修改</a></button>
                     </div>
 
                 </fieldset>
@@ -73,6 +77,8 @@
             <h1>回首頁</h1>
         </a>
     </div>
+
+    <script src="./JavaScript/service.js"></script>
 
     <script>
         if (UserNameCheck = "${username}") {
