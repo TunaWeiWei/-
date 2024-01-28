@@ -30,8 +30,12 @@
         <div class="inf">
             <form action="post" id="Reservation_sheet">
                 <fieldset class="box">
-                    <input type="hidden" name="account" value="test_account" required />
-                    <input type="hidden" name="userName" value="test_userName" required />
+
+                    <table>
+                        <input type="hidden" id="account" name="account" value="memberaccount" required />
+                        <input type="hidden" id="userName" name="userName" value="BILLY" required />
+                    </table>
+
                     <table>
                         <tr>
                             <th>預約人數:</th>
@@ -77,11 +81,14 @@
         </a>
     </div>
 
+    <!--負責資料上傳至Google Script App的javaScript-->
     <script src="./JavaScript/service.js"></script>
+
+
 
     <script>
         if (UserNameCheck = "${username}") {
-            document.getElementById("member").innerText = "你好:" + "${username}";
+            document.getElementById("member").innerText = "你好:" + "";
         } else {
             document.getElementById("member").innerText = "登入/註冊";
         }
