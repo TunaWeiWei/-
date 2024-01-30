@@ -1,4 +1,4 @@
-var script_url = "https://script.google.com/macros/s/AKfycby4ewWrVVGYRGVA1Hhrnc6ewWJlP7M9kbBLpS5oS63e0UrsMdRZp-Rcz_F71j7TDs8X/exec";
+var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe6-CwFGFDCkDCQ7Ah_s4m6RSz0bAtyYmN32cLRef-VAG9D/exec";
 $(document).ready(function ($) {
     $("#Reservation_sheet").submit(function (event) {
         $('#account, #userName, #customer, #date, #eatingTime').prop("disabled", false);
