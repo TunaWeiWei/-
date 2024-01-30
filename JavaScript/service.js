@@ -7,7 +7,13 @@ $(document).ready(function ($) {
         var customer = $("#customer").val();
         var date = $("#date").val();
         var eatingTime = $("#eatingTime").val();
-        var url = script_url + "?account=" + account + "&userName=" + userName + "&customer=" + customer + "&date=" + date + "&eatingTime=" + eatingTime + "&action=create";
+        var url = script_url +
+            "?account=" + account +
+            "&userName=" + userName +
+            "&customer=" + customer +
+            "&date=" + date +
+            "&eatingTime=" + eatingTime +
+            "&action=serviceSubmit";
         var request = $.ajax({
             url: url,
             type: "POST"

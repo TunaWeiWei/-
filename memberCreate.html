@@ -39,9 +39,7 @@
             </a>
         </div>
         <div class="inf">
-            <form
-                action="https://script.google.com/macros/s/AKfycby4ewWrVVGYRGVA1Hhrnc6ewWJlP7M9kbBLpS5oS63e0UrsMdRZp-Rcz_F71j7TDs8X/exec"
-                method="post" id="google-sheet">
+            <form action="post" id="MemberCreate_sheet">
                 <fieldset class="box">
 
                     <table>
@@ -100,22 +98,21 @@
                         </tr>
                     </table>
 
-                    <div>
-                        <input type="submit" value="申請" />
-                    </div>
-
                     <div class="member-submit-bar">
                         <div class="memberCreateSubmit">
-                            <button type="submit" id="buttonPress" value="add"><a>申請</a></button>
+                            <button type="submit" id="SubmitButton" value="add"><a>申請</a></button>
                         </div>
                         <div class="memberCreateCancel">
-                            <button id="buttonPress"><a class="btn" href="index.html">取消申請</a></button>
+                            <button id="CancelButton"><a class="btn" href="">取消申請</a></button>
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
+
+    <!--負責資料上傳至Google Script App的javaScript-->
+    <script src="./JavaScript/memberCreate.js"></script>
 
     <!-- 彈出會員登入成功or會員修改成功 -->
     <!--
