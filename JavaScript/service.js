@@ -16,15 +16,26 @@ $(document).ready(function ($) {
             "&action=serviceSubmit";
         var request = $.ajax({
             url: url,
-            type: "POST"
+            type: "POST",
+
+            //將回傳值存入session storage內讓後續頁面可以再運用
+            success: function (response) {
+                sessionStorage.setItem("userData", JSON.stringify(response));
+
+                window.location.href = "index.html";
+            },
+            error: function (thrownError) {
+                console.log(thrownError);
+                window.location.reload();
+            }
 
         });
         request.done(function (response, textStatus, jqXHR) {
-            alert("完成");
+            alert("傳送完成");
 
-            //將回傳值存入session storage內讓後續頁面可以再運用
-            sessionStorage.setItem("userData", JSON.stringify(response));
-            window.location.href = "index.html";
+            //將回傳值存入session storage內讓後續頁面可以再運用 2/1改由success及error處執行
+            //   sessionStorage.setItem("userData", JSON.stringify(response));
+            //   window.location.href = "index.html";
 
         });
         request.always(function () {

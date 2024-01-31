@@ -20,15 +20,26 @@ $(document).ready(function ($) {
             "&action=Member_create";
         var request = $.ajax({
             url: url,
-            type: "POST"
+            type: "POST",
+
+
+            success: function (response) {
+                sessionStorage.setItem("userData", JSON.stringify(response));
+                window.location.href = "index.html";
+            },
+            error: function (thrownError) {
+                console.log(thrownError);
+                window.location.reload();
+            }
+
 
         });
         request.done(function (response, textStatus, jqXHR) {
-            alert("完成");
+            alert("傳送完成");
 
             //將回傳值存入session storage內讓後續頁面可以再運用
-            sessionStorage.setItem("userData", JSON.stringify(response));
-            window.location.href = "index.html";
+            //    sessionStorage.setItem("userData", JSON.stringify(response));
+            //    window.location.href = "index.html";
 
         });
         request.always(function () {

@@ -54,14 +54,37 @@
 
     <script>
         function memberStatus() {
-            if ("${user}" == "loginSuccess") {
-                toastr.options.timeOut = 3000;
-                toastr.info('會員登入成功');
 
-            } else if ("${alert}" == "ReservationSuccess") {
-                toastr.options.timeOut = 3000;
-                toastr.info('預約成功');
-            };
+            var userData = sessionStorage.getItem("userData")
+            if (userData == null) {
+                toastr.options = {
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-left",
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "3000"
+                }
+
+                toastr.info('userData暫存沒有東西');
+
+            } else {
+                toastr.options = {
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-left",
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "3000"
+                }
+
+                toastr.success(userData, "通知")
+                //清除userData的暫存以免後續回到此頁面會跳出不合當下狀況的通知
+                var userData = sessionStorage.removeItem("userData")
+
+            }
         }	
     </script>
 
