@@ -39,7 +39,7 @@
             <a href="service.html">
                 <button class="text">立即預約</button>
             </a>
-            <a href="<c:url value='memberShipCenter'/>">
+            <a href="memberShipCenter.html">
                 <button class="text">會員中心</button>
             </a>
 
@@ -82,7 +82,7 @@
 
                 toastr.success(userData, "通知")
                 //清除userData的暫存以免後續回到此頁面會跳出不合當下狀況的通知
-                var userData = sessionStorage.removeItem("userData")
+                //var userData = sessionStorage.removeItem("userData")
 
             }
         }	

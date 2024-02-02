@@ -17,7 +17,7 @@ $(document).ready(function ($) {
             "&tel=" + tel +
             "&cellphone=" + cellphone +
             "&email=" + email +
-            "&action=Member_create";
+            "&action=Member_Create";
         var request = $.ajax({
             url: url,
             type: "POST",

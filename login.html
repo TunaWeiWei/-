@@ -20,7 +20,7 @@
     <title>登入頁面</title>
 </head>
 
-<body onload="memberStatus()">
+<body onload="">
     <div class="icon-bar">
         <a href="index.html">
             <img id="home_img" src="./Icon/home.png" alt="首頁">
@@ -32,7 +32,7 @@
         </a>
     </div>
     <h1 style="text-align: center; margin-top: 50px">登入您的帳號</h1>
-    <form method='POST' action="loginCheck">
+    <form action="post" id="Login_sheet">
         <fieldset class=member>
             <div class="mem">
                 <label>會員帳號:</label>
@@ -45,15 +45,17 @@
 
             <div class="member-submit-bar">
                 <div class="mem1">
-                    <button id="create"><a href="" style="text-decoration: none;">註冊新會員</a></button>
+                    <button id="create"><a href="memberCreate.html" style="text-decoration: none;">註冊新會員</a></button>
                 </div>
                 <div class="mem1">
-                    <input type="submit" value="登入" class="button"><br />
+                    <button type="submit" id="SubmitButton"><a class="btn">登入</a></button>
                 </div>
 
             </div>
         </fieldset>
     </form>
+
+    <script src="./JavaScript/login.js"></script>
 
     <!-- 彈出帳號申請成功提醒 -->
     <script>
