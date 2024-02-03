@@ -1,12 +1,12 @@
 var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe6-CwFGFDCkDCQ7Ah_s4m6RSz0bAtyYmN32cLRef-VAG9D/exec";
 $(document).ready(function ($) {
     $("#Reservation_sheet").submit(function (event) {
-        $('#account, #userName, #customer, #date, #eatingTime').prop("disabled", false);
+        $('#account, #userName, [name="customer"], #date, [name="eatingTime"]').prop("disabled", false);
         var account = $("#account").val();
         var userName = $("#userName").val();
-        var customer = $("#customer").val();
+        var customer = $("[name='customer']:checked").val();
         var date = $("#date").val();
-        var eatingTime = $("#eatingTime").val();
+        var eatingTime = $("[name='eatingTime']:checked").val();
         var url = script_url +
             "?account=" + account +
             "&userName=" + userName +
@@ -39,7 +39,7 @@ $(document).ready(function ($) {
 
         });
         request.always(function () {
-            $('#account, #userName, #customer, #date, #eatingTime').prop("disabled", true);
+            $('#account, #userName, [name="customer"], #date, [name="eatingTime"]').prop("disabled", true);
 
         });
         event.preventDefault();
