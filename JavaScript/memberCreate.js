@@ -25,17 +25,18 @@ $(document).ready(function ($) {
 
             success: function (response) {
                 sessionStorage.setItem("userData", JSON.stringify(response));
-                window.location.href = "index.html";
+                alert("傳送完成");
+                window.location.href = "login.html";
             },
             error: function (thrownError) {
                 console.log(thrownError);
+                alert("傳送失敗");
                 window.location.reload();
             }
 
 
         });
         request.done(function (response, textStatus, jqXHR) {
-            alert("傳送完成");
 
             //將回傳值存入session storage內讓後續頁面可以再運用
             //    sessionStorage.setItem("userData", JSON.stringify(response));

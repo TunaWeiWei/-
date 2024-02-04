@@ -55,7 +55,7 @@
     <script>
         function memberStatus() {
 
-            var userData = sessionStorage.getItem("userData")
+            var userData = sessionStorage.getItem('loginCheck')
             if (userData == null) {
                 toastr.options = {
                     "newestOnTop": false,
@@ -80,21 +80,15 @@
                     "extendedTimeOut": "3000"
                 }
 
-                toastr.success(userData, "通知")
+                toastr.success("登入成功,歡迎回來", "通知")
                 //清除userData的暫存以免後續回到此頁面會跳出不合當下狀況的通知
                 //var userData = sessionStorage.removeItem("userData")
 
             }
         }	
     </script>
-
-    <script>
-        if (UserNameCheck = "${username}") {
-            document.getElementById("member").innerText = "你好:" + "${username}";
-        } else {
-            document.getElementById("member").innerText = "登入/註冊";
-        }
-    </script>
+    <!--登入按鈕的文字依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_status.js"></script>
 
 </body>
 

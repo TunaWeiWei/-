@@ -20,7 +20,14 @@ $(document).ready(function () {
 
             //將回傳值存入session storage內讓後續頁面可以再運用
             success: function (response) {
-                sessionStorage.setItem("userData", response.loginCheck);
+                sessionStorage.setItem("loginCheck", response.loginCheck);
+                sessionStorage.setItem("account", account);
+                sessionStorage.setItem("username", response.username);
+                sessionStorage.setItem("age", response.age);
+                sessionStorage.setItem("tel", response.tel);
+                sessionStorage.setItem("cellphone", response.cellphone);
+                sessionStorage.setItem("email", response.email);
+
 
                 window.location.href = "index.html";
             },
