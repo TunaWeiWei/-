@@ -2,21 +2,21 @@ var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe
 $(document).ready(function ($) {
     $("#MemberCreate_sheet").submit(function (event) {
         $('#account, #userName, #passWord, #age, #tel, #cellphone, #email').prop("disabled", false);
-        var account = $("#account").val();
-        var userName = $("#userName").val();
-        var passWord = $("#passWord").val();
-        var age = $("#age").val();
-        var tel = $("#tel").val();
-        var cellphone = $("#cellphone").val();
-        var email = $("#email").val();
+        var account_create = $("#account").val();
+        var userName_create = $("#userName").val();
+        var passWord_create = $("#passWord").val();
+        var age_create = $("#age").val();
+        var tel_create = $("#tel").val();
+        var cellphone_create = $("#cellphone").val();
+        var email_create = $("#email").val();
         var url = script_url +
-            "?account=" + account +
-            "&userName=" + userName +
-            "&passWord=" + passWord +
-            "&age=" + age +
-            "&tel=" + tel +
-            "&cellphone=" + cellphone +
-            "&email=" + email +
+            "?account=" + account_create +
+            "&userName=" + userName_create +
+            "&passWord=" + passWord_create +
+            "&age=" + age_create +
+            "&tel=" + tel_create +
+            "&cellphone=" + cellphone_create +
+            "&email=" + email_create +
             "&action=Member_Create";
         var request = $.ajax({
             url: url,
