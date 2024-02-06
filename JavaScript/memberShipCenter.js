@@ -10,8 +10,8 @@ $(document).ready(function () {
     // 放入到html中
     $('#username').text(username);
     $('#age').text(age);
-    $('#tel').text(0 + tel);
-    $('#cellphone').text(0 + cellphone);
+    $('#tel').text(tel);
+    $('#cellphone').text(cellphone);
     $('#email').text(email);
 
 });
