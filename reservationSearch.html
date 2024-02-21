@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./CSS/reservationSearchCSS.css" type="text/css">
 </head>
 
-<body onload="memberStatus()">
+<body>
     <div class="icon-bar">
         <a href="index.html">
             <img id="home_img" src="./Icon/home.png" alt="首頁">
@@ -32,76 +32,59 @@
             <span class="" id="member"></span>
         </a>
     </div>
-    <div class="member-functions-bar">
-        <form class="">
-            <div class="memberShipCenter">
-                <span id="Edit"><a class="btn" href="memberShipCenter.html">會員中心</a></span>
-            </div>
-            <div class="log">
-                <span id="buttonPress"><a class="btn" href="index.html">登出</a></span> <!--需要加JS去處理登出資料-->
-            </div>
-        </form>
-    </div>
+
     <div id="bc">
         <div id="title">
             <h1>會員中心</h1>
         </div>
+        <form id="reservation_select">
+            <div>
+                <label>預約時間查詢</label>
+                <select>
+                    <option value="">ALL</option>
+                    <option value="1">一個月內</option>
+                    <option value="2">兩個月內</option>
+                    <option value="3">三個月內</option>
+                </select>
+                <input type="submit" id="" value="查詢">
+
+            </div>
+        </form>
+
 
         <div class="inf">
 
             <form>
                 <fieldset class="box">
                     <table>
-                        <tr>
-                            <th>預約日期:</th>
-                            <td>date</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th id="form_title">預約日期</th>
+                                <th id="form_title">預約人數</th>
+                                <th id="form_title">預約時段</th>
+                            </tr>
+                        </thead>
                     </table>
                 </fieldset>
             </form>
             <form>
                 <fieldset class="box">
                     <table>
-                        <tr>
-                            <th>預約人數:</th>
-                            <td>customer</td>
-                        </tr>
+                        <tbody id="reservation_Search_Data"></tbody>
                     </table>
                 </fieldset>
-
             </form>
-            <form>
-                <fieldset class="box">
-                    <table>
-                        <tr>
-                            <th>預約時段:</th>
-                            <td>eatingTime</td>
-                        </tr>
-                    </table>
-                </fieldset>
 
-            </form>
         </div>
     </div>
 
     <!-- 彈出會員登入成功or會員修改成功 -->
 
-    <script>
-        function memberStatus() {
-            if ("${alert}" == "editSuccess") {
-                toastr.options.timeOut = 3000;
-                toastr.info('會員修改成功');
-            }
-        }	
-    </script>
-    <script>
+    <script src="./JavaScript/reservationSearch.js"></script>
 
-        if (UserNameCheck = "${username}") {
-            document.getElementById("member").innerText = "你好:" + "${username}";
-        } else {
-            document.getElementById("member").innerText = "登入/註冊";
-        }
-    </script>
+    <script src="./JavaScript/loginICON_status.js"></script>
+
+
 </body>
 
 </html>
