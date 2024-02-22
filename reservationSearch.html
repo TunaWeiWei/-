@@ -27,7 +27,7 @@
             <img id="home_img" src="./Icon/home.png" alt="首頁">
             <span class="" id="home"></span>
         </a>
-        <a href="login.html">
+        <a id="member_redirect" href="">
             <img id="login_img" src="./Icon/user.png" alt="會員登入">
             <span class="" id="member"></span>
         </a>
@@ -35,7 +35,7 @@
 
     <div id="bc">
         <div id="title">
-            <h1>會員中心</h1>
+            <h1>預約時間查詢</h1>
         </div>
         <form id="reservation_select">
             <div>
@@ -79,10 +79,16 @@
     </div>
 
     <!-- 彈出會員登入成功or會員修改成功 -->
-
     <script src="./JavaScript/reservationSearch.js"></script>
 
+    <!--登入按鈕的文字依登入狀態做改變-->
     <script src="./JavaScript/loginICON_status.js"></script>
+
+    <!--登入按鈕的超連結導向依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_redirect.js"></script>
+
+    <!--登出功能-->
+    <script src="./JavaScript/logout.js"></script>
 
 
 </body>

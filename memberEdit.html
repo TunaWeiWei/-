@@ -11,6 +11,9 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!--loginCheck確認登入狀態-->
+    <script src="./JavaScript/loginCheck.js"></script>
+
     <!-- toastr v2.1.4 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
@@ -31,7 +34,7 @@
                 <img id="home_img" src="./Icon/home.png" alt="首頁">
                 <span class="" id="home"></span>
             </a>
-            <a href="login.html">
+            <a id="member_redirect" href="">
                 <img id="login_img" src="./Icon/user.png" alt="會員登入">
                 <span class="" id="member"></span>
             </a>
@@ -109,6 +112,17 @@
 
     <!--負責資料上傳至Google Script App的javaScript-->
     <script src="./JavaScript/memberEdit.js"></script>
+
+    <!--登入按鈕的文字依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_status.js"></script>
+
+    <!--登入按鈕的超連結導向依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_redirect.js"></script>
+
+    <!--登出功能-->
+    <script src="./JavaScript/logout.js"></script>
+
+    <!---->
 
     <!-- 彈出會員登入成功or會員修改成功 -->
     <!--

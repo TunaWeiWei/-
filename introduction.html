@@ -21,7 +21,7 @@
             <img id="home_img" src="./Icon/home.png" alt="首頁">
             <span class="" id="home"></span>
         </a>
-        <a href="">
+        <a id="member_redirect" href="">
             <img id="login_img" src="./Icon/user.png" alt="會員登入">
             <span class="" id="member"></span>
         </a>
@@ -43,13 +43,14 @@
     </div>
 
 
-    <script>
-        if (UserNameCheck = "${username}") {
-            document.getElementById("member").innerText = "你好:" + "${username}";
-        } else {
-            document.getElementById("member").innerText = "登入/註冊";
-        }
-    </script>
+    <!--登入按鈕的文字依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_status.js"></script>
+
+    <!--登入按鈕的超連結導向依登入狀態做改變-->
+    <script src="./JavaScript/loginICON_redirect.js"></script>
+
+    <!--登出功能-->
+    <script src="./JavaScript/logout.js"></script>
 </body>
 
 </html>
