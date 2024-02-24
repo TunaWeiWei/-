@@ -25,8 +25,18 @@ $(document).ready(function ($) {
 
             success: function (response) {
                 sessionStorage.setItem("userData", JSON.stringify(response));
-                alert("傳送完成");
-                window.location.href = "login.html";
+                var accountCheck = sessionStorage.getItem('userData');
+                if (accountCheck == '"此帳號不可使用，請重新設定帳號"') {
+                    alert(accountCheck);
+                } else if (accountCheck == '"會員成功申請"') {
+                    alert(accountCheck);
+                    window.location.href = "login.html";
+                } else {
+                    alert("????");
+                    window.location.reload();
+
+                }
+
             },
             error: function (thrownError) {
                 console.log(thrownError);

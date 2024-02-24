@@ -6,11 +6,9 @@ $(document).ready(function () {
 var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe6-CwFGFDCkDCQ7Ah_s4m6RSz0bAtyYmN32cLRef-VAG9D/exec";
 $(document).ready(function ($) {
     $("#reservation_select").submit(function (event) {
-        var userName = sessionStorage.getItem('username') || '沒有資料';
         var account = sessionStorage.getItem('account') || '沒有資料';
         var url = script_url +
             "?account=" + account +
-            "&userName=" + userName +
             "&action=reservation_Search";
         var request = $.ajax({
             url: url,
