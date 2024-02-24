@@ -1,7 +1,9 @@
 # reservation_website
- 訂位網站 前端(HTML + CSS + JavaScript) 後端(Google Apps Script + Google Sheets)<br/>
+ 訂位網站 前端(HTML + CSS + JavaScript) / 後端(Google Apps Script + Google Sheets)<br/>
  目前功能:<br/>
- *建立會員及會員登入系統<br/>
+ *建立會員登入系統<br/>
+ *會員申請系統<br/>
+ *使用者輸入之資料格式驗證(例:會員資料)和重複性驗證(例:帳號)<br/>
  *會員登出系統<br/>
  *會員資料查詢及修改<br/>
  *餐廳訂位預約功能<br/>
