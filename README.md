@@ -1,5 +1,6 @@
 # reservation_website
  訂位網站 前端(HTML + CSS + JavaScript) / 後端(Google Apps Script + Google Sheets)<br/>
+ 目前狀態:已暫時關閉GAS功能<br/>
  目前功能:<br/>
  *建立會員登入系統<br/>
  *會員申請系統<br/>
