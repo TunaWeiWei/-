@@ -1,4 +1,4 @@
-var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe6-CwFGFDCkDCQ7Ah_s4m6RSz0bAtyYmN32cLRef-VAG9D/exec";
+var script_url = "https://script.google.com/macros/s/AKfycbwzCP8-Vc8F3PRbNXUhYfo8QavsWp7LpWu4HhleqvzX1MmD__y2sCZC0-BNAbjGg79G/exec";
 $(document).ready(function ($) {
     $("#MemberCreate_sheet").submit(function (event) {
         $('#account, #userName, #passWord, #age, #tel, #cellphone, #email').prop("disabled", false);

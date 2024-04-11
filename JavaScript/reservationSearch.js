@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 //偵測reservationSearch.html按下查詢鍵後的動作
-var script_url = "https://script.google.com/macros/s/AKfycbwVJ3PcHQtiRownTHIanQe6-CwFGFDCkDCQ7Ah_s4m6RSz0bAtyYmN32cLRef-VAG9D/exec";
+var script_url = "https://script.google.com/macros/s/AKfycbwzCP8-Vc8F3PRbNXUhYfo8QavsWp7LpWu4HhleqvzX1MmD__y2sCZC0-BNAbjGg79G/exec";
 $(document).ready(function ($) {
     $("#reservation_select").submit(function (event) {
         var account = sessionStorage.getItem('account') || '沒有資料';
